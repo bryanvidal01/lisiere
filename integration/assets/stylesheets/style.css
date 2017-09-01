@@ -8849,3 +8849,20 @@ button.close {
     display: none !important;
   }
 }
+/* line 1, ../sass/elements/_header.scss */
+body {
+  font-family: 'audreymedium';
+}
+
+@font-face {
+  font-family: 'audreymedium';
+  src: url("../fonts/audrey-medium-webfont.woff2") format("woff2"), url("../fonts/audrey-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'audreyregular';
+  src: url("../fonts/audrey-normal-webfont.woff2") format("woff2"), url("../fonts/audrey-normal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
