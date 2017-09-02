@@ -1,8 +1,11 @@
 // Elements
 @import "elements/reset";
 @import "bootstrap";
-@import "elements/header";
+@import "elements/variables";
 @import "elements/fonts";
+@import "elements/buttons";
+@import "elements/titles";
+@import "elements/header";
 
 // Pages
 @import "pages/homepage";

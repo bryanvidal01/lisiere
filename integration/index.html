@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="assets/stylesheets/style.css">
     </head>
     <body>
@@ -12,10 +12,10 @@
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="logo">
-                            <img src="assets/images/logo.png" alt="">
+                            <img src="assets/images/logo.svg" alt="">
                         </div>
                         <ul class="navigation">
-                            <li>
+                            <li class="current">
                                 <a href="#">Accueil</a>
                             </li>
                             <li>
@@ -44,55 +44,64 @@
             </div>
         </header>
 
-        <div class="intro-head" style="background: url('assets/images/background-intro.jpg')">
-            <div class="container-intro">
-                <div class="logo-intro">
-                    <img src="assets/images/intro.png" alt="">
+        <div class="intro-head" style="background-image: url('assets/images/background-intro.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="container-intro">
+                            <div class="logo-intro">
+                                <img src="assets/images/baseline.svg" alt="">
+                            </div>
+                            <div class="text-paragraphe white">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="button button-white">Nous contacter</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-intro text white">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                </div>
-                <a href="#" class="button button-white">Nous contacter</a>
             </div>
         </div>
 
         <div class="container-site container-home container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h1 class="title-site border">
-                        Bienvenue à la Lisière Dorée
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-
-                <div class="col-xs-12">
-                    <div class="bloc-image-text">
-                        <div class="image" style="background: url('assets/images/image-1.jpg');"></div>
-                        <div class="text">
-                            <h2 class="title-site">
-                                Mariages
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <a href="#" class="button button-pink">En savoir plus</a>
-                        </div>
+                <div class="col-sm-12 text-center">
+                    <div class="text-about">
+                        <h1 class="title-site border">
+                            Bienvenue à la Lisière Dorée
+                        </h1>
+                        <p class="text-paragraphe">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <div class="bloc-image-text">
-                        <div class="text">
-                            <h2 class="title-site">
-                                Mariages
-                            </h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <a href="#" class="button button-green">En savoir plus</a>
+                    <div class="container-services-home">
+                        <div class="bloc-image-text clearfix">
+                            <div class="image" style="background-image: url('assets/images/image-service.jpg');"></div>
+                            <div class="text">
+                                <h2 class="title-site">
+                                    Mariages
+                                </h2>
+                                <p class="text-paragraphe">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <a href="#" class="button button-pink border-under">En savoir plus</a>
+                            </div>
                         </div>
-                        <div class="image" style="background: url('assets/images/image-1.jpg');"></div>
+                        <div class="bloc-image-text clearfix">
+                            <div class="image" style="background-image: url('assets/images/image-service.jpg');"></div>
+                            <div class="text">
+                                <h2 class="title-site">
+                                    Mariages
+                                </h2>
+                                <p class="text-paragraphe">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <a href="#" class="button button-green border-under">En savoir plus</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,39 @@
+.title-site{
+    font-family: $title;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 30px;
+
+    &.border{
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:before, &:after{
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: $gold;
+            left: 50%;
+            position: absolute;
+            @include translate(0, -50%);
+        }
+
+        &:before{
+            top: 0;
+        }
+        &:after{
+            bottom: 0;
+        }
+    }
+}
+
+
+.text-paragraphe{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+
+    &.white{
+        color: #FFF;
+    }
+}
