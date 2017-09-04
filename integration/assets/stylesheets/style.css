@@ -8961,14 +8961,19 @@ a:hover, a:focus {
 .title-site.border:after {
   bottom: 0;
 }
+/* line 29, ../sass/elements/_titles.scss */
+.title-site.white {
+  color: #FFF;
+}
 
-/* line 31, ../sass/elements/_titles.scss */
+/* line 35, ../sass/elements/_titles.scss */
 .text-paragraphe {
   font-size: 14px;
   line-height: 22px;
   font-weight: 300;
+  opacity: .7;
 }
-/* line 36, ../sass/elements/_titles.scss */
+/* line 40, ../sass/elements/_titles.scss */
 .text-paragraphe.white {
   color: #FFF;
 }
@@ -9010,18 +9015,30 @@ body {
   font-weight: 100;
   font-size: 13px;
   font-family: "audrey";
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
-/* line 34, ../sass/elements/_header.scss */
+/* line 33, ../sass/elements/_header.scss */
+.header ul li a:hover {
+  color: #b8ac86;
+}
+/* line 39, ../sass/elements/_header.scss */
 .header ul li.current a {
   color: #b8ac86;
 }
-/* line 41, ../sass/elements/_header.scss */
+/* line 46, ../sass/elements/_header.scss */
 .header .navigation {
   margin-top: 16px;
 }
-/* line 45, ../sass/elements/_header.scss */
+/* line 50, ../sass/elements/_header.scss */
 .header .second-nav {
   margin-top: 16px;
+}
+
+/* line 2, ../sass/elements/_footer.scss */
+.footer a {
+  color: #b8ac86;
 }
 
 /* line 1, ../sass/pages/_homepage.scss */
@@ -9138,9 +9155,47 @@ body {
   background: #333333;
   width: calc( 100%  + 30px );
   margin-left: -15px;
-  padding: 60px 0;
+  padding: 90px 0;
+  text-align: center;
 }
-/* line 108, ../sass/pages/_homepage.scss */
+/* line 109, ../sass/pages/_homepage.scss */
 .container-avis .title-site {
   margin-top: 0;
+}
+/* line 113, ../sass/pages/_homepage.scss */
+.container-avis .logo-avis {
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  opacity: .2;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+/* line 120, ../sass/pages/_homepage.scss */
+.container-avis .logo-avis svg {
+  width: 100%;
+}
+/* line 124, ../sass/pages/_homepage.scss */
+.container-avis .item-avis {
+  color: #FFF;
+  font-family: "audrey";
+  font-size: 20px;
+  max-width: 600px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+  font-weight: 100;
+}
+/* line 134, ../sass/pages/_homepage.scss */
+.container-avis .container-item {
+  position: relative;
+  z-index: 30;
+}
+
+/* line 140, ../sass/pages/_homepage.scss */
+.footer {
+  padding: 30px;
 }

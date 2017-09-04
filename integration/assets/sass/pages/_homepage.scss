@@ -103,9 +103,40 @@
     background: $black;
     width: calc( 100%  + 30px );
     margin-left: -15px;
-    padding: 60px 0;
+    padding: 90px 0;
+    text-align: center;
 
     .title-site{
         margin-top: 0;
     }
+
+    .logo-avis{
+        width: 200px;
+        left: 50%;
+        top: 50%;
+        opacity: .2;
+        @include translate(-50%, -50%);
+        position: absolute;
+        svg{
+            width: 100%;
+        }
+    }
+    .item-avis{
+        color: #FFF;
+        font-family: $title;
+        font-size: 20px;
+        max-width: 600px;
+        padding: 0 30px;
+        margin: 0 auto;
+        position: relative;
+        font-weight: 100;
+    }
+    .container-item{
+        position: relative;
+        z-index: 30;
+    }
+}
+
+.footer{
+    padding: 30px;
 }
