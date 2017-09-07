@@ -8948,10 +8948,10 @@ a:hover, a:focus {
   background: #b8ac86;
   left: 50%;
   position: absolute;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 /* line 21, ../sass/elements/_titles.scss */
 .title-site.border:before {
@@ -8962,20 +8962,33 @@ a:hover, a:focus {
   bottom: 0;
 }
 /* line 29, ../sass/elements/_titles.scss */
+.title-site.border.border-pink:before, .title-site.border.border-pink:after {
+  background: #f0cbca;
+}
+/* line 35, ../sass/elements/_titles.scss */
 .title-site.white {
   color: #FFF;
 }
 
-/* line 35, ../sass/elements/_titles.scss */
+/* line 41, ../sass/elements/_titles.scss */
 .text-paragraphe {
   font-size: 14px;
   line-height: 22px;
   font-weight: 300;
   opacity: .7;
 }
-/* line 40, ../sass/elements/_titles.scss */
+/* line 46, ../sass/elements/_titles.scss */
 .text-paragraphe.white {
   color: #FFF;
+}
+
+/* line 51, ../sass/elements/_titles.scss */
+.title-page {
+  font-family: "audrey";
+  font-size: 30px;
+  color: #FFF;
+  text-transform: uppercase;
+  position: relative;
 }
 
 /* line 1, ../sass/elements/_header.scss */
@@ -9198,4 +9211,45 @@ body {
 /* line 140, ../sass/pages/_homepage.scss */
 .footer {
   padding: 30px;
+}
+
+/* line 1, ../sass/pages/_univers.scss */
+.title-page {
+  text-align: center;
+}
+
+/* line 5, ../sass/pages/_univers.scss */
+.strate {
+  padding: 30px;
+}
+/* line 8, ../sass/pages/_univers.scss */
+.strate .bloc-text {
+  padding: 0 30px;
+}
+/* line 11, ../sass/pages/_univers.scss */
+.strate .bloc-text.text-alone {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* line 16, ../sass/pages/_univers.scss */
+.strate .container-image {
+  position: relative;
+}
+/* line 19, ../sass/pages/_univers.scss */
+.strate .container-image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 8px;
+  top: 8px;
+  z-index: -1;
+}
+/* line 30, ../sass/pages/_univers.scss */
+.strate .container-image.image-pink:before {
+  background: #f0cbca;
+}
+/* line 34, ../sass/pages/_univers.scss */
+.strate .container-image img {
+  width: 100%;
 }

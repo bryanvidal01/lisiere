@@ -15,7 +15,7 @@
             background: $gold;
             left: 50%;
             position: absolute;
-            @include translate(0, -50%);
+            @include translate(-50%, -50%);
         }
 
         &:before{
@@ -23,6 +23,12 @@
         }
         &:after{
             bottom: 0;
+        }
+
+        &.border-pink{
+            &:before, &:after{
+                background: $pink;
+            }
         }
     }
 
@@ -40,4 +46,13 @@
     &.white{
         color: #FFF;
     }
+}
+
+.title-page{
+    font-family: $title;
+    font-size: 30px;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+
 }
