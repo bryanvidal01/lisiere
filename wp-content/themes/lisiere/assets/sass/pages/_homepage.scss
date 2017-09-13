@@ -1,0 +1,142 @@
+.intro-head{
+    background-size: cover;
+    padding: 150px 0;
+    background-position: center;
+    position: relative;
+    &:before{
+        content: '';
+        background: rgba(#000, .5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-paragraphe{
+        max-width: 500px;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .container-intro{
+        position: relative;
+        z-index: 30;
+    }
+    .logo-intro{
+        max-width: 600px;
+        margin: auto;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.container-site{
+    box-shadow: 0 0 30px rgba(#000, .075);
+}
+
+.container-home{
+    margin-top: -50px;
+    position: relative;
+    z-index: 30;
+    background: #FFF;
+}
+
+.text-about{
+    max-width: 600px;
+    margin: 60px auto 0;
+
+    .title-site{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.bloc-image-text{
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    position: relative;
+
+    .title-site{
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .image{
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    .text{
+        width: 50%;
+        padding: 60px;
+        float: right;
+        border-top: #F7F7F7 1px solid;
+        border-bottom: #F7F7F7 1px solid;
+    }
+
+    .button{
+        margin-top: 30px;
+    }
+
+    &:nth-child(odd){
+        .image{
+            left: auto;
+            right: 0;
+        }
+        .text{
+            float: left;
+        }
+    }
+}
+
+.container-services-home{
+    margin-top: 60px;
+}
+
+
+.container-avis{
+    background: $black;
+    width: calc( 100%  + 30px );
+    margin-left: -15px;
+    padding: 90px 0;
+    text-align: center;
+
+    .title-site{
+        margin-top: 0;
+    }
+
+    .logo-avis{
+        width: 200px;
+        left: 50%;
+        top: 50%;
+        opacity: .2;
+        @include translate(-50%, -50%);
+        position: absolute;
+        svg{
+            width: 100%;
+        }
+    }
+    .item-avis{
+        color: #FFF;
+        font-family: $title;
+        font-size: 20px;
+        max-width: 600px;
+        padding: 0 30px;
+        margin: 0 auto;
+        position: relative;
+        font-weight: 100;
+    }
+    .container-item{
+        position: relative;
+        z-index: 30;
+    }
+}
+
+.footer{
+    padding: 30px;
+}

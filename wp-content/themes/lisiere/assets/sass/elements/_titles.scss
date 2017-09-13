@@ -1,0 +1,58 @@
+.title-site{
+    font-family: $title;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 30px;
+
+    &.border{
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &:before, &:after{
+            content: '';
+            width: 25px;
+            height: 2px;
+            background: $gold;
+            left: 50%;
+            position: absolute;
+            @include translate(-50%, -50%);
+        }
+
+        &:before{
+            top: 0;
+        }
+        &:after{
+            bottom: 0;
+        }
+
+        &.border-pink{
+            &:before, &:after{
+                background: $pink;
+            }
+        }
+    }
+
+    &.white{
+        color: #FFF;
+    }
+}
+
+
+.text-paragraphe{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    opacity: .7;
+    &.white{
+        color: #FFF;
+    }
+}
+
+.title-page{
+    font-family: $title;
+    font-size: 30px;
+    color: #FFF;
+    text-transform: uppercase;
+    position: relative;
+
+}

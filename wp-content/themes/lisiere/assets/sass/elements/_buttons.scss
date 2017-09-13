@@ -1,0 +1,59 @@
+a{
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+}
+.button{
+    display: inline-block;
+    padding: 17px 30px 15px;
+    font-family: $title;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    @include transition(.3s);
+
+    &.button-white{
+        background: #FFF;
+        color: $black;
+
+        &:hover{
+            background: $gold;
+            color: #FFF;
+        }
+    }
+
+    &.border-under{
+        background: #f7f7f7;
+        color: $black;
+        position: relative;
+        @include transition(.2s);
+        &:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            z-index: -2;
+            @include transition(.2s);
+        }
+        &:hover{
+            background: #f1f1f1;
+
+            &:after{
+                left: -0;
+                top: -0;
+            }
+        }
+        &.button-green{
+            &:after{
+                background: $green;
+            }
+        }
+        &.button-pink{
+            &:after{
+                background: $pink;
+            }
+        }
+    }
+}
