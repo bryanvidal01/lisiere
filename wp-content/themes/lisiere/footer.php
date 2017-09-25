@@ -8,8 +8,8 @@
             </div>
             <div class="col-sm-6 text-right">
                 <p class="text-paragraphe">
-                    <a href="#">contact@lalisieredoree.com</a><br/>
-                    06.10.45.12.25
+                    <a href="mailto:<?php echo get_field('email', 'option'); ?>"><?php echo get_field('email', 'option'); ?></a><br/>
+                    <?php echo get_field('phone', 'option'); ?>
                 </p>
             </div>
         </div>

@@ -38,30 +38,38 @@ Template Name: Homepage
         </div>
         <div class="col-xs-12">
             <div class="container-services-home">
-                <div class="bloc-image-text clearfix">
-                    <div class="image" style="background-image: url('assets/images/image-service.jpg');"></div>
-                    <div class="text">
-                        <h2 class="title-site">
-                            Mariages
-                        </h2>
-                        <p class="text-paragraphe">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <a href="#" class="button button-pink border-under">En savoir plus</a>
+
+
+                <?php
+                    $args = array(
+                        'post_type'=> 'service',
+                        'order'    => 'ASC'
+                    );
+                    query_posts( $args );
+                    while ( have_posts() ) : the_post();
+                        $imgID = get_field('thumbnail_service');
+                        if($imgID != NULL):
+                            $urlImage = wp_get_attachment_image_src($imgID, "800x800");
+                        endif;
+                    ?>
+
+                    <div class="bloc-image-text clearfix">
+                        <div class="image" style="background-image: url('<?php echo $urlImage[0]; ?>');"></div>
+                        <div class="text">
+                            <h2 class="title-site">
+                                <?php echo get_the_title(); ?>
+                            </h2>
+                            <p class="text-paragraphe">
+                                <?php echo get_the_content(); ?>
+                            </p>
+                            <a href="<?php echo get_the_permalink(); ?>" class="button button-pink border-under">En savoir plus</a>
+                        </div>
                     </div>
-                </div>
-                <div class="bloc-image-text clearfix">
-                    <div class="image" style="background-image: url('assets/images/image-service.jpg');"></div>
-                    <div class="text">
-                        <h2 class="title-site">
-                            Mariages
-                        </h2>
-                        <p class="text-paragraphe">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <a href="#" class="button button-green border-under">En savoir plus</a>
-                    </div>
-                </div>
+
+                    <?php endwhile;
+                    wp_reset_query();
+                ?>
+
             </div>
         </div>
     </div>
@@ -76,7 +84,9 @@ Template Name: Homepage
                         Ils parlent de nous
                     </h4>
                     <div class="item-avis">
-                        <p>Nous avons passé un super weekend à la Lisière Dorée</p>
+                        <p>
+                            <?php echo get_field('avis'); ?>
+                        </p>
                     </div>
                 </div>
             </div>
