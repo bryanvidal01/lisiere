@@ -1,0 +1,29 @@
+.form{
+    input, select, textarea{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #EEE;
+        margin-bottom: 20px;
+
+        &:focus{
+            outline: none;
+            border: 1px solid #DDD;
+        }
+    }
+
+    select{
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+        background: transparent;
+        background: url('../images/arrow-select.jpg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) 50%;
+        background-size: 10px;
+    }
+
+    textarea{
+        resize: none;
+        height: 150px;
+    }
+}

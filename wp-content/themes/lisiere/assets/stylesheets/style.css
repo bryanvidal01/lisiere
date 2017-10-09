@@ -8926,6 +8926,12 @@ a:hover, a:focus {
 .button.border-under.button-pink:after {
   background: #f0cbca;
 }
+/* line 60, ../sass/elements/_buttons.scss */
+.button.button-black {
+  color: #FFF;
+  border: 0;
+  background: #222;
+}
 
 /* line 1, ../sass/elements/_titles.scss */
 .title-site {
@@ -9052,6 +9058,35 @@ body {
 /* line 2, ../sass/elements/_footer.scss */
 .footer a {
   color: #b8ac86;
+}
+
+/* line 2, ../sass/elements/_forms.scss */
+.form input, .form select, .form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #EEE;
+  margin-bottom: 20px;
+}
+/* line 8, ../sass/elements/_forms.scss */
+.form input:focus, .form select:focus, .form textarea:focus {
+  outline: none;
+  border: 1px solid #DDD;
+}
+/* line 14, ../sass/elements/_forms.scss */
+.form select {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  background: transparent;
+  background: url("../images/arrow-select.jpg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) 50%;
+  background-size: 10px;
+}
+/* line 25, ../sass/elements/_forms.scss */
+.form textarea {
+  resize: none;
+  height: 150px;
 }
 
 /* line 1, ../sass/pages/_homepage.scss */
@@ -9252,4 +9287,15 @@ body {
 /* line 34, ../sass/pages/_univers.scss */
 .strate .container-image img {
   width: 100%;
+}
+
+/* line 1, ../sass/pages/_reservation.scss */
+.form-reservation {
+  margin-top: 60px;
+}
+
+/* line 5, ../sass/pages/_reservation.scss */
+.text-intro-reservation {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
