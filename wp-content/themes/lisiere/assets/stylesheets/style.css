@@ -9304,3 +9304,34 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+
+/* line 3, ../sass/pages/_contact.scss */
+.header-map .map iframe {
+  width: calc(100% - 500px);
+  height: calc(100vh - 190px);
+}
+
+/* line 10, ../sass/pages/_contact.scss */
+.container-contact {
+  max-width: 500px;
+  background: #333333;
+  height: calc(100vh - 140px);
+  color: #FFF;
+  position: absolute;
+  height: calc(100vh - 190px);
+  right: 0;
+  top: 70px;
+  margin-top: 0;
+}
+/* line 21, ../sass/pages/_contact.scss */
+.container-contact .container-contact-content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 100%;
+  text-align: center;
+}

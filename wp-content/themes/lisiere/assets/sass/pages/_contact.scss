@@ -1,0 +1,29 @@
+.header-map{
+    .map{
+        iframe{
+            width: calc(100% - 500px);
+            height: calc(100vh - 190px);
+        }
+    }
+}
+
+.container-contact{
+    max-width: 500px;
+    background: $black;
+    height: calc(100vh - 140px);
+    color: #FFF;
+    position: absolute;
+    height: calc(100vh - 190px);
+    right: 0;
+    top: 70px;
+    margin-top: 0;
+
+    .container-contact-content{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include translate(0, -50%);
+        width: 100%;
+        text-align: center;
+    }
+}
