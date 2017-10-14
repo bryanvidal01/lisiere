@@ -22,9 +22,7 @@ endif;
     </div>
 </div>
 
-<div class="container-site container-home container">
-
-
+<div class="container-site container-home container-single container">
     <?php
     // check if the flexible content field has rows of data
     if( have_rows('strates_services') ):

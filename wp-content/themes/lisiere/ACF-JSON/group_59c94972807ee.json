@@ -271,6 +271,13 @@
                 "operator": "==",
                 "value": "service"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/cms.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -279,5 +286,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1506366588
+    "modified": 1507743554
 }

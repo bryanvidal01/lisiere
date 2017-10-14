@@ -9254,23 +9254,28 @@ body {
 }
 
 /* line 5, ../sass/pages/_univers.scss */
+.container-single {
+  padding-bottom: 30px;
+}
+
+/* line 9, ../sass/pages/_univers.scss */
 .strate {
   padding: 30px;
 }
-/* line 8, ../sass/pages/_univers.scss */
+/* line 12, ../sass/pages/_univers.scss */
 .strate .bloc-text {
   padding: 0 30px;
 }
-/* line 11, ../sass/pages/_univers.scss */
+/* line 15, ../sass/pages/_univers.scss */
 .strate .bloc-text.text-alone {
   max-width: 800px;
   margin: 0 auto;
 }
-/* line 16, ../sass/pages/_univers.scss */
+/* line 20, ../sass/pages/_univers.scss */
 .strate .container-image {
   position: relative;
 }
-/* line 19, ../sass/pages/_univers.scss */
+/* line 23, ../sass/pages/_univers.scss */
 .strate .container-image:before {
   content: '';
   position: absolute;
@@ -9280,11 +9285,11 @@ body {
   top: 8px;
   z-index: -1;
 }
-/* line 30, ../sass/pages/_univers.scss */
+/* line 34, ../sass/pages/_univers.scss */
 .strate .container-image.image-pink:before {
   background: #f0cbca;
 }
-/* line 34, ../sass/pages/_univers.scss */
+/* line 38, ../sass/pages/_univers.scss */
 .strate .container-image img {
   width: 100%;
 }
