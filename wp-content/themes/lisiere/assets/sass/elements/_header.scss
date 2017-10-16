@@ -15,7 +15,7 @@ body{
         }
     }
 
-    ul{
+    .menu-pricipal-container, ul{
         display: inline-block;
         vertical-align: top;
         li{
@@ -43,12 +43,47 @@ body{
         }
     }
 
-    .navigation{
+    .menu{
         margin-top: 16px;
     }
 
     .second-nav{
         margin-top: 16px;
     }
+}
 
+.social{
+    position: fixed;
+    right: 0;
+    z-index: 30;
+    top: 50%;
+    @include translate(0, -50%);
+
+    li{
+        background: #FFF;
+        box-shadow: 0 0 30px rgba(#000, .075);
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        @include transition(.3s);
+        &:hover{
+            background: #b8ac86;
+
+            svg{
+                fill: #FFF;
+            }
+        }
+
+        a{
+            display: block;
+        }
+
+        svg{
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            @include transition(.3s);
+        }
+    }
 }

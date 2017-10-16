@@ -14,20 +14,10 @@
                         <div class="logo">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
                         </div>
-                        <ul class="navigation">
-                            <li class="current">
-                                <a href="#">Accueil</a>
-                            </li>
-                            <li>
-                                <a href="#">Récéption</a>
-                            </li>
-                            <li>
-                                <a href="#">Autre lien</a>
-                            </li>
-                            <li>
-                                <a href="#">Autre lien</a>
-                            </li>
-                        </ul>
+
+                        <?php
+                            wp_nav_menu();
+                        ?>
                     </div>
 
                     <div class="col-sm-4 text-right">
@@ -43,3 +33,5 @@
                 </div>
             </div>
         </header>
+
+        <?php include 'includes/social.php'; ?>

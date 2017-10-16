@@ -9018,17 +9018,17 @@ body {
   width: 100%;
 }
 /* line 18, ../sass/elements/_header.scss */
-.header ul {
+.header .menu-pricipal-container, .header ul {
   display: inline-block;
   vertical-align: top;
 }
 /* line 21, ../sass/elements/_header.scss */
-.header ul li {
+.header .menu-pricipal-container li, .header ul li {
   display: inline-block;
   margin: 0 12px;
 }
 /* line 25, ../sass/elements/_header.scss */
-.header ul li a {
+.header .menu-pricipal-container li a, .header ul li a {
   color: #222;
   text-transform: uppercase;
   font-weight: 100;
@@ -9039,20 +9039,65 @@ body {
   transition: 0.3s;
 }
 /* line 33, ../sass/elements/_header.scss */
-.header ul li a:hover {
+.header .menu-pricipal-container li a:hover, .header ul li a:hover {
   color: #b8ac86;
 }
 /* line 39, ../sass/elements/_header.scss */
-.header ul li.current a {
+.header .menu-pricipal-container li.current a, .header ul li.current a {
   color: #b8ac86;
 }
 /* line 46, ../sass/elements/_header.scss */
-.header .navigation {
+.header .menu {
   margin-top: 16px;
 }
 /* line 50, ../sass/elements/_header.scss */
 .header .second-nav {
   margin-top: 16px;
+}
+
+/* line 55, ../sass/elements/_header.scss */
+.social {
+  position: fixed;
+  right: 0;
+  z-index: 30;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+/* line 62, ../sass/elements/_header.scss */
+.social li {
+  background: #FFF;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.075);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 70, ../sass/elements/_header.scss */
+.social li:hover {
+  background: #b8ac86;
+}
+/* line 73, ../sass/elements/_header.scss */
+.social li:hover svg {
+  fill: #FFF;
+}
+/* line 78, ../sass/elements/_header.scss */
+.social li a {
+  display: block;
+}
+/* line 82, ../sass/elements/_header.scss */
+.social li svg {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /* line 2, ../sass/elements/_footer.scss */
