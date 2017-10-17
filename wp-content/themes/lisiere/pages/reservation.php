@@ -53,8 +53,8 @@ if( (isset($_POST['is_send']))  ){
                     <div class="col-sm-6">
                         <label for="">Civilité *</label>
                         <select class="" name="civility">
-                            <option value="particulier">Mme.</option>
-                            <option value="professionnel">M.</option>
+                            <option value="mme.">Mme.</option>
+                            <option value="m.">M.</option>
                         </select>
                     </div>
                     <div class="col-sm-6">

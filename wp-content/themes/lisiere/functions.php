@@ -172,3 +172,85 @@ function send_mail(){
         return $success;
     }
 }
+
+function addCustomImportButton()
+{
+    global $current_screen;
+
+    // Not our post type, exit earlier
+    // You can remove this if condition if you don't have any specific post type to restrict to.
+    if ('devis' != $current_screen->post_type) {
+        return;
+    }
+
+    ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                jQuery('.subsubsub').append('<li><a href="?post_type=devis&export=1">Exporter les demandes de devis</a></li>');
+            })
+        </script>
+    <?php
+}
+
+add_action('admin_head-edit.php','addCustomImportButton');
+
+
+function submitExport(){
+    if(isset($_GET['post_type']) && (isset($_GET['export']))){
+
+        $posttype = $_GET['post_type'];
+
+        $args = array(
+        	'post_type' => $posttype,
+        );
+
+        $query = new WP_Query( $args );
+
+        if ( $query->have_posts() ) {
+
+
+            $dataExport = array();
+
+            while ( $query->have_posts() ) {
+                $query->the_post();
+
+                $dataItem = array(
+					get_field('gender'),
+					get_field('civility'),
+					get_field('prenom'),
+					get_field('nom'),
+					get_field('societe'),
+					get_field('phone'),
+					get_field('email'),
+					get_field('adresse'),
+					get_field('ville'),
+					get_field('pays'),
+					get_field('date'),
+					get_field('flexibility'),
+					get_field('budget'),
+					get_field('invites'),
+					get_field('event'),
+					get_field('message')
+				);
+                array_push($dataExport, $dataItem);
+             }
+
+
+            $out = fopen('php://output', 'w');
+
+            foreach ($dataExport as $data) {
+                fputcsv($out, $data);
+            }
+
+            fclose($out);
+        }
+
+        header("Content-Disposition: attachment; filename=\"devis.csv\"");
+        header("Content-Type: application/force-download");
+        header("Connection: close");
+        die;
+
+    }
+}
+
+add_action('admin_init', 'submitExport');
