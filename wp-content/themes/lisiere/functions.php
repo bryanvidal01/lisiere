@@ -36,10 +36,26 @@ function create_post_type() {
         'singular_name' => __( 'Service' )
       ),
       'public' => true,
+	  'menu_icon' => 'dashicons-format-status',
+    )
+  );
+  register_post_type( 'devis',
+    array(
+      'labels' => array(
+        'name' => __( 'Devis' ),
+		'singular_name' => __( 'Devis' ),
+		'has_archive' => true,
+      ),
+      'public' => true,
+	  'supports' => array('title'),
+	  'menu_icon' => 'dashicons-media-default',
     )
   );
 }
 
+// Autorisations
+$role_object = get_role( 'editor' );
+$role_object->add_cap( 'edit_theme_options' );
 
 // Page option
 
@@ -53,4 +69,106 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'      => true
 	));
 
+}
+
+// Correspondance des pages
+
+function get_contact_page(){
+	$urlPage = get_field('contact_page', 'option');
+	return $urlPage;
+}
+
+function get_reservation_page(){
+	$urlPage = get_field('reservation_page', 'option');
+	return $urlPage;
+}
+
+
+// Demande de Devis
+function send_mail(){
+	if(
+		(!empty($_POST['genre']))
+		&& (!empty($_POST['civility']))
+		&& (!empty($_POST['prenom']))
+		&& (!empty($_POST['nom']))
+		&& (!empty($_POST['phone']))
+		&& (!empty($_POST['email']))
+		&& (!empty($_POST['adresse']))
+		&& (!empty($_POST['ville']))
+		&& (!empty($_POST['pays']))
+		&& (!empty($_POST['date']))
+		&& (!empty($_POST['flexibility']))
+		&& (!empty($_POST['budget']))
+		&& (!empty($_POST['invites']))
+		&& (!empty($_POST['event']))
+		&& (!empty($_POST['code_postal'])) ) {
+
+		$genre = $_POST['genre'];
+		$civility = $_POST['civility'];
+		$prenom = $_POST['prenom'];
+		$nom = $_POST['nom'];
+		$societe = $_POST['societe'];
+		$phone = $_POST['phone'];
+		$email = $_POST['email'];
+		$adresse = $_POST['adresse'];
+		$ville = $_POST['ville'];
+		$pays = $_POST['pays'];
+		$date = $_POST['date'];
+		$flexibility = $_POST['flexibility'];
+		$budget = $_POST['budget'];
+		$invites = $_POST['invites'];
+		$event = $_POST['event'];
+		$code_postal = $_POST['code_postal'];
+		$message = $_POST['message'];
+
+
+		$postInsert = array(
+			'post_title' => $prenom . ' ' . $nom,
+	        'post_status' => 'draft',
+	        'post_type' => 'devis'
+	    );
+
+		$postID = wp_insert_post( $postInsert );
+
+        update_field('field_59e5169fc73ee', $genre, $postID);
+        update_field('field_59e516aec73ef', $civility, $postID);
+        update_field('field_59e516bdc73f0', $prenom, $postID);
+        update_field('field_59e516cac73f1', $nom, $postID);
+        update_field('field_59e516e6c73f3', $phone, $postID);
+        update_field('field_59e516efc73f4', $email, $postID);
+        update_field('field_59e516fcc73f5', $adresse, $postID);
+        update_field('field_59e51706c73f6', $ville, $postID);
+        update_field('field_59e51710c73f7', $pays, $postID);
+        update_field('field_59e51718c73f8', $date, $postID);
+        update_field('field_59e51725c73f9', $flexibility, $postID);
+        update_field('field_59e51731c73fa', $budget, $postID);
+        update_field('field_59e51739c73fb', $invites, $postID);
+        update_field('field_59e51743c73fc', $event, $postID);
+        update_field('field_59e5174cc73fd', $code_postal, $postID);
+
+		if(($societe != '') && (isset($societe))):
+			update_field('field_59e516d7c73f2', $societe, $postID);
+		endif;
+
+		if(($message != '') && (isset($message))):
+			update_field('field_59e51755c73fe', $message, $postID);
+		endif;
+
+
+        $success = 1;
+
+        // $adminEmail = get_field('email_adress', 'option');
+        // $siteName = get_bloginfo('name');
+		//
+        // $bodyMail = '<p>Name : ' . $name . '</p><p>Email : ' . $email . '</p><p>Message : ' . $message . '</p>';
+        // $headers = array('Content-Type: text/html; charset=UTF-8');
+		//
+        // wp_mail($adminEmail, $siteName .' | '. $name . '', $bodyMail, $headers);
+
+        return $success;
+
+	}else{
+        $success = 0;
+        return $success;
+    }
 }

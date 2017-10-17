@@ -1,4 +1,4 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class="basline" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1056.4 101.3" style="enable-background:new 0 0 1056.4 101.3;" xml:space="preserve">
 <g>
 	<path class="st0" d="M143.1,42.2c-8.1,9.2-17.9,16.6-29.3,22.6C100.3,72,87,75.9,74,76.7c-5,5.8-9.5,10.2-13.4,13

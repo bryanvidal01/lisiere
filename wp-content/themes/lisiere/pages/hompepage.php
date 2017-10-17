@@ -10,13 +10,13 @@ Template Name: Homepage
             <div class="col-sm-12">
                 <div class="container-intro">
                     <div class="logo-intro">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/baseline.svg" alt="">
+                        <?php  include 'baseline.php'; ?>
                     </div>
                     <div class="text-paragraphe white">
                         <?php echo get_field('text_big_img'); ?>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="button button-white">Nous contacter</a>
+                        <a href="<?php echo get_contact_page(); ?>" class="button button-white">Nous contacter</a>
                     </div>
                 </div>
             </div>

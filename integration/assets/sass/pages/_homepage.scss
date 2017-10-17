@@ -26,11 +26,14 @@
     .logo-intro{
         max-width: 600px;
         margin: auto;
-        img{
-            width: 100%;
-        }
     }
 }
+
+.basline{
+    width: 100%;
+    fill: #FFF;
+}
+
 
 .container-site{
     box-shadow: 0 0 30px rgba(#000, .075);

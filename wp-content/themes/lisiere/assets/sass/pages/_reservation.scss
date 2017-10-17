@@ -6,3 +6,17 @@
     margin-top: 60px;
     margin-bottom: 60px;
 }
+
+.error{
+    margin-bottom: 60px;
+    display: block;
+    background: #F7F7F7;
+    padding: 10px;
+
+    .error-response{
+        color: red;
+    }
+    .validate-response{
+        color: green;
+    }
+}

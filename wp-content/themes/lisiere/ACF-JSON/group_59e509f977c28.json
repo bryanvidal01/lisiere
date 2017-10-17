@@ -1,0 +1,60 @@
+{
+    "key": "group_59e509f977c28",
+    "title": "Correspondance des pages",
+    "fields": [
+        {
+            "key": "field_59e50a0163ecb",
+            "label": "Page contact",
+            "name": "contact_page",
+            "prefix": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0
+        },
+        {
+            "key": "field_59e50a1163ecc",
+            "label": "Page reservation",
+            "name": "reservation_page",
+            "prefix": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "options-generales"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1508182570
+}

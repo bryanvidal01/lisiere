@@ -1,10 +1,17 @@
 body{
     font-family: $text;
+    padding-top: 70px;
 }
 
 .header{
     padding: 10px 0;
     background: #FFF;
+    position: fixed;
+    box-shadow: 0 0 30px rgba(#000, .075);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 40;
     .logo{
         display: inline-block;
         width: 50px;
@@ -35,7 +42,7 @@ body{
                 }
             }
 
-            &.current{
+            &.current-menu-item{
                 a{
                     color: $gold;
                 }
@@ -54,7 +61,7 @@ body{
 
 .social{
     position: fixed;
-    right: 0;
+    left: 0;
     z-index: 30;
     top: 50%;
     @include translate(0, -50%);

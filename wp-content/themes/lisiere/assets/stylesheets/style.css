@@ -9000,34 +9000,41 @@ a:hover, a:focus {
 /* line 1, ../sass/elements/_header.scss */
 body {
   font-family: "Roboto";
+  padding-top: 70px;
 }
 
-/* line 5, ../sass/elements/_header.scss */
+/* line 6, ../sass/elements/_header.scss */
 .header {
   padding: 10px 0;
   background: #FFF;
+  position: fixed;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.075);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
 }
-/* line 8, ../sass/elements/_header.scss */
+/* line 15, ../sass/elements/_header.scss */
 .header .logo {
   display: inline-block;
   width: 50px;
   margin-right: 15px;
 }
-/* line 13, ../sass/elements/_header.scss */
+/* line 20, ../sass/elements/_header.scss */
 .header .logo svg {
   width: 100%;
 }
-/* line 18, ../sass/elements/_header.scss */
+/* line 25, ../sass/elements/_header.scss */
 .header .menu-pricipal-container, .header ul {
   display: inline-block;
   vertical-align: top;
 }
-/* line 21, ../sass/elements/_header.scss */
+/* line 28, ../sass/elements/_header.scss */
 .header .menu-pricipal-container li, .header ul li {
   display: inline-block;
   margin: 0 12px;
 }
-/* line 25, ../sass/elements/_header.scss */
+/* line 32, ../sass/elements/_header.scss */
 .header .menu-pricipal-container li a, .header ul li a {
   color: #222;
   text-transform: uppercase;
@@ -9038,27 +9045,27 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 33, ../sass/elements/_header.scss */
+/* line 40, ../sass/elements/_header.scss */
 .header .menu-pricipal-container li a:hover, .header ul li a:hover {
   color: #b8ac86;
 }
-/* line 39, ../sass/elements/_header.scss */
-.header .menu-pricipal-container li.current a, .header ul li.current a {
+/* line 46, ../sass/elements/_header.scss */
+.header .menu-pricipal-container li.current-menu-item a, .header ul li.current-menu-item a {
   color: #b8ac86;
 }
-/* line 46, ../sass/elements/_header.scss */
+/* line 53, ../sass/elements/_header.scss */
 .header .menu {
   margin-top: 16px;
 }
-/* line 50, ../sass/elements/_header.scss */
+/* line 57, ../sass/elements/_header.scss */
 .header .second-nav {
   margin-top: 16px;
 }
 
-/* line 55, ../sass/elements/_header.scss */
+/* line 62, ../sass/elements/_header.scss */
 .social {
   position: fixed;
-  right: 0;
+  left: 0;
   z-index: 30;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -9066,7 +9073,7 @@ body {
   -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-/* line 62, ../sass/elements/_header.scss */
+/* line 69, ../sass/elements/_header.scss */
 .social li {
   background: #FFF;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.075);
@@ -9078,19 +9085,19 @@ body {
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 70, ../sass/elements/_header.scss */
+/* line 77, ../sass/elements/_header.scss */
 .social li:hover {
   background: #b8ac86;
 }
-/* line 73, ../sass/elements/_header.scss */
+/* line 80, ../sass/elements/_header.scss */
 .social li:hover svg {
   fill: #FFF;
 }
-/* line 78, ../sass/elements/_header.scss */
+/* line 85, ../sass/elements/_header.scss */
 .social li a {
   display: block;
 }
-/* line 82, ../sass/elements/_header.scss */
+/* line 89, ../sass/elements/_header.scss */
 .social li svg {
   display: inline-block;
   width: 13px;
@@ -9167,17 +9174,18 @@ body {
   max-width: 600px;
   margin: auto;
 }
-/* line 29, ../sass/pages/_homepage.scss */
-.intro-head .logo-intro img {
+/* line 30, ../sass/pages/_homepage.scss */
+.intro-head .logo-intro .basline {
   width: 100%;
+  fill: #FFF;
 }
 
-/* line 35, ../sass/pages/_homepage.scss */
+/* line 37, ../sass/pages/_homepage.scss */
 .container-site {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.075);
 }
 
-/* line 39, ../sass/pages/_homepage.scss */
+/* line 41, ../sass/pages/_homepage.scss */
 .container-home {
   margin-top: -50px;
   position: relative;
@@ -9185,29 +9193,29 @@ body {
   background: #FFF;
 }
 
-/* line 46, ../sass/pages/_homepage.scss */
+/* line 48, ../sass/pages/_homepage.scss */
 .text-about {
   max-width: 600px;
   margin: 60px auto 0;
 }
-/* line 50, ../sass/pages/_homepage.scss */
+/* line 52, ../sass/pages/_homepage.scss */
 .text-about .title-site {
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
-/* line 56, ../sass/pages/_homepage.scss */
+/* line 58, ../sass/pages/_homepage.scss */
 .bloc-image-text {
   width: calc(100% + 30px);
   margin-left: -15px;
   position: relative;
 }
-/* line 61, ../sass/pages/_homepage.scss */
+/* line 63, ../sass/pages/_homepage.scss */
 .bloc-image-text .title-site {
   margin-bottom: 20px;
   margin-top: 0;
 }
-/* line 65, ../sass/pages/_homepage.scss */
+/* line 67, ../sass/pages/_homepage.scss */
 .bloc-image-text .image {
   width: 50%;
   height: 100%;
@@ -9216,7 +9224,7 @@ body {
   top: 0;
   position: absolute;
 }
-/* line 74, ../sass/pages/_homepage.scss */
+/* line 76, ../sass/pages/_homepage.scss */
 .bloc-image-text .text {
   width: 50%;
   padding: 60px;
@@ -9224,26 +9232,26 @@ body {
   border-top: #F7F7F7 1px solid;
   border-bottom: #F7F7F7 1px solid;
 }
-/* line 82, ../sass/pages/_homepage.scss */
+/* line 84, ../sass/pages/_homepage.scss */
 .bloc-image-text .button {
   margin-top: 30px;
 }
-/* line 87, ../sass/pages/_homepage.scss */
+/* line 89, ../sass/pages/_homepage.scss */
 .bloc-image-text:nth-child(odd) .image {
   left: auto;
   right: 0;
 }
-/* line 91, ../sass/pages/_homepage.scss */
+/* line 93, ../sass/pages/_homepage.scss */
 .bloc-image-text:nth-child(odd) .text {
   float: left;
 }
 
-/* line 97, ../sass/pages/_homepage.scss */
+/* line 99, ../sass/pages/_homepage.scss */
 .container-services-home {
   margin-top: 60px;
 }
 
-/* line 102, ../sass/pages/_homepage.scss */
+/* line 104, ../sass/pages/_homepage.scss */
 .container-avis {
   background: #333333;
   width: calc( 100%  + 30px );
@@ -9251,11 +9259,11 @@ body {
   padding: 90px 0;
   text-align: center;
 }
-/* line 109, ../sass/pages/_homepage.scss */
+/* line 111, ../sass/pages/_homepage.scss */
 .container-avis .title-site {
   margin-top: 0;
 }
-/* line 113, ../sass/pages/_homepage.scss */
+/* line 115, ../sass/pages/_homepage.scss */
 .container-avis .logo-avis {
   width: 200px;
   left: 50%;
@@ -9267,11 +9275,11 @@ body {
   transform: translate(-50%, -50%);
   position: absolute;
 }
-/* line 120, ../sass/pages/_homepage.scss */
+/* line 122, ../sass/pages/_homepage.scss */
 .container-avis .logo-avis svg {
   width: 100%;
 }
-/* line 124, ../sass/pages/_homepage.scss */
+/* line 126, ../sass/pages/_homepage.scss */
 .container-avis .item-avis {
   color: #FFF;
   font-family: "audrey";
@@ -9282,13 +9290,13 @@ body {
   position: relative;
   font-weight: 100;
 }
-/* line 134, ../sass/pages/_homepage.scss */
+/* line 136, ../sass/pages/_homepage.scss */
 .container-avis .container-item {
   position: relative;
   z-index: 30;
 }
 
-/* line 140, ../sass/pages/_homepage.scss */
+/* line 142, ../sass/pages/_homepage.scss */
 .footer {
   padding: 30px;
 }
@@ -9348,6 +9356,22 @@ body {
 .text-intro-reservation {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+/* line 10, ../sass/pages/_reservation.scss */
+.error {
+  margin-bottom: 60px;
+  display: block;
+  background: #F7F7F7;
+  padding: 10px;
+}
+/* line 16, ../sass/pages/_reservation.scss */
+.error .error-response {
+  color: red;
+}
+/* line 19, ../sass/pages/_reservation.scss */
+.error .validate-response {
+  color: green;
 }
 
 /* line 3, ../sass/pages/_contact.scss */

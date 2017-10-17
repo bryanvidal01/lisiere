@@ -10,9 +10,11 @@
         <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
                         <div class="logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
+                            <a href="<?php echo get_site_url(); ?>">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="">
+                            </a>
                         </div>
 
                         <?php
@@ -20,13 +22,13 @@
                         ?>
                     </div>
 
-                    <div class="col-sm-4 text-right">
+                    <div class="col-sm-3 text-right">
                         <ul class="second-nav">
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="<?php echo get_contact_page(); ?>">Contact</a>
                             </li>
                             <li>
-                                <a href="#">Reservation</a>
+                                <a href="<?php echo get_reservation_page(); ?>">Reservation</a>
                             </li>
                         </ul>
                     </div>
