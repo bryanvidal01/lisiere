@@ -20,3 +20,13 @@
         color: green;
     }
 }
+
+@media (max-width: $screen-xs-max) {
+    .form-reservation{
+        margin-top: 30px;
+    }
+
+    .error{
+        margin-bottom: 30px;
+    }
+}

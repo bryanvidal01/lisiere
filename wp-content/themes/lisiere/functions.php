@@ -213,36 +213,13 @@ function submitExport(){
 
             while ( $query->have_posts() ) {
                 $query->the_post();
-
-                $dataItem = array(
-					get_field('gender'),
-					get_field('civility'),
-					get_field('prenom'),
-					get_field('nom'),
-					get_field('societe'),
-					get_field('phone'),
-					get_field('email'),
-					get_field('adresse'),
-					get_field('ville'),
-					get_field('pays'),
-					get_field('date'),
-					get_field('flexibility'),
-					get_field('budget'),
-					get_field('invites'),
-					get_field('event'),
-					get_field('message')
-				);
+                $dataItem = array(get_field('gender'),get_field('civility'),get_field('prenom'),get_field('nom'),get_field('societe'),get_field('phone'),get_field('email'),get_field('adresse'),get_field('ville'),get_field('pays'),get_field('date'),get_field('flexibility'),get_field('budget'),get_field('invites'),get_field('event'),get_field('message'));
                 array_push($dataExport, $dataItem);
              }
-
-
             $out = fopen('php://output', 'w');
-
             foreach ($dataExport as $data) {
                 fputcsv($out, $data);
-            }
-
-            fclose($out);
+            }fclose($out);
         }
 
         header("Content-Disposition: attachment; filename=\"devis.csv\"");

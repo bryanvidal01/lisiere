@@ -48,6 +48,7 @@ body{
                 }
             }
         }
+
     }
 
     .menu{
@@ -92,5 +93,99 @@ body{
             height: 13px;
             @include transition(.3s);
         }
+    }
+}
+
+
+@media (max-width: $screen-xs-max) {
+    .header{
+        position: fixed;
+        height: 100%;
+        @include translate(-100%, 0);
+        background: #FFF;
+        @include transition(.3s);
+        .menu-pricipal-container li,  ul li{
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+
+            a{
+                font-size: 18px;
+            }
+        }
+
+        .menu-pricipal-container, ul{
+            display: block;
+            width: 100%;
+        }
+
+        .menu{
+            margin-bottom: 0;
+        }
+
+        .second-nav{
+            margin-top: 0;
+        }
+
+        .logo{
+            display: block;
+            margin: 40px auto;
+            width: 80px;
+        }
+
+        &.open{
+            @include translate(0, 0);
+        }
+    }
+
+    .logo-mobile{
+        position: absolute;
+        top: 13px;
+        left: 50%;
+        @include translate(-50%, 0);
+
+        img{
+            width: 45px;
+        }
+    }
+    .container-menu-mobile{
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #FFF;
+        padding: 5px;
+        z-index: 300;
+
+        border: 1px solid #F7F7F7;
+        .button-mobile{
+            width: 25px;
+            padding: 7px 0;
+
+            .barre{
+                width: 100%;
+                height: 3px;
+                background: $gold;
+
+                &:before, &:after{
+                    content: '';
+                    width: 25px;
+                    height: 3px;
+                    background: $gold;
+                    left: 50%;
+                    @include translate(-50%, 0);
+                    position: absolute;
+                    top: 5px;
+                }
+
+                &:after{
+                    top: auto;
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .social{
+        display: none;
     }
 }

@@ -3,3 +3,13 @@
         color: $gold;
     }
 }
+
+@media (max-width: $screen-xs-max) {
+    .footer{
+        text-align: center;
+
+        .text-paragraphe{
+            text-align: center;
+        }
+    }
+}

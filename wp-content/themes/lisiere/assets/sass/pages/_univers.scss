@@ -40,3 +40,17 @@
         }
     }
 }
+
+@media (max-width: $screen-xs-max) {
+    .strate .bloc-text{
+        padding: 0;
+    }
+
+    .strate .container-image{
+        margin-bottom: 40px;
+    }
+
+    .strate{
+        padding: 20px;
+    }
+}

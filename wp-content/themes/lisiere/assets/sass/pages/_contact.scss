@@ -27,3 +27,20 @@
         text-align: center;
     }
 }
+
+@media (max-width: $screen-xs-max) {
+    .container-contact{
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        .container-contact-content{
+            position: relative;
+        }
+    }
+
+    .header-map .map iframe{
+        height: 500px;
+        width: 100%;
+    }
+}
