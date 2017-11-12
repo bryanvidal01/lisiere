@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/stylesheets/style.css">
 
         <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.js" charset="utf-8"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/flickity.js" charset="utf-8"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/assets/js/masonry.js" charset="utf-8"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/assets/js/app.js" charset="utf-8"></script>
     </head>
     <body>

@@ -102,6 +102,11 @@
 }
 
 
+.slider-avis{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .container-avis{
     background: $black;
     width: calc( 100%  + 30px );
@@ -128,7 +133,6 @@
         color: #FFF;
         font-family: $title;
         font-size: 20px;
-        max-width: 600px;
         padding: 0 30px;
         margin: 0 auto;
         position: relative;

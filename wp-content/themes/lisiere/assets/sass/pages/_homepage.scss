@@ -127,21 +127,31 @@
         color: #FFF;
         font-family: $title;
         font-size: 20px;
-        max-width: 600px;
         padding: 0 30px;
         margin: 0 auto;
         position: relative;
         font-weight: 100;
+        width: 100%;
     }
     .container-item{
         position: relative;
         z-index: 30;
+    }
+
+    .slider-avis{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .button{
+        margin-top: 40px;
     }
 }
 
 .footer{
     padding: 30px;
 }
+
 
 
 

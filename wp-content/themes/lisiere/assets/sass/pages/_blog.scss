@@ -1,0 +1,29 @@
+.container-blog{
+    padding: 50px;
+}
+
+.article-blog{
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    img{
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .title{
+        font-size: 18px;
+        font-family: $title;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .date{
+        margin-top: 20px;
+        font-size: 12px;
+        font-style: italic;
+        font-family: $title;
+        text-transform: uppercase;
+        opacity: .7;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba($black, .2);
+    }
+}

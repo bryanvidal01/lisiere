@@ -62,7 +62,7 @@ Template Name: Homepage
                             <p class="text-paragraphe">
                                 <?php echo get_the_content(); ?>
                             </p>
-                            <a href="<?php echo get_the_permalink(); ?>" class="button button-pink border-under">En savoir plus</a>
+                            <a href="<?php echo get_the_permalink(); ?>" class="button border-under">En savoir plus</a>
                         </div>
                     </div>
 
@@ -79,14 +79,27 @@ Template Name: Homepage
                 <div class="logo-avis">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-avis.svg" alt="">
                 </div>
-                <div class="container-item">
-                    <h4 class="title-site white">
-                        Ils parlent de nous
-                    </h4>
-                    <div class="item-avis">
-                        <p>
-                            <?php echo get_field('avis'); ?>
-                        </p>
+                    <div class="container-item">
+                        <h4 class="title-site white">
+                            Ils parlent de nous
+                        </h4>
+                        <div class="slider-avis">
+                            <?php
+                            if( have_rows('avis') ):
+                                while ( have_rows('avis') ) : the_row(); ?>
+                                    <div class="item-avis">
+                                        <p>
+                                            <?php echo the_sub_field('avis_content'); ?>
+                                        </p>
+                                    </div>
+                                <?php endwhile;
+                            endif;
+                            ?>
+                        </div>
+
+                        <a href="https://www.facebook.com/pg/lisieredoree/reviews/" class="button button-white">
+                            Voir tous les avis
+                        </a>
                     </div>
                 </div>
             </div>

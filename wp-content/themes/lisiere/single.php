@@ -1,6 +1,18 @@
 <?php get_header();
 the_post();
 
+$couleur = get_field('color_code');
+
+if($couleur): ?>
+    <style>
+        .title-site.border.border-pink:before,
+        .title-site.border.border-pink:after,
+        .strate .container-image.image-pink:before{
+            background: <?php echo $couleur; ?>
+        }
+    </style>
+<?php endif;
+
 $imgID = get_field('thumbnail_service');
 if($imgID != NULL):
     $urlImage = wp_get_attachment_image_src($imgID, "1800x800");
